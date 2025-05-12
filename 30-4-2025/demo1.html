@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VelvetVow</title>
+    <link rel="shortcut icon" href="./logo.png" type="image/x-icon">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        header{
+            display: flex;
+            justify-content: space-evenly;
+            height: 60px;
+            background-color: hotpink;
+            align-items: center;
+        }
+        nav ul{
+            display: flex;
+           list-style: none;
+           background-color: hotpink;
+           height: 100%;
+           /* width: 100vw; */
+           gap: 40px;
+           justify-content: space-evenly;
+           align-items: center;
+        }
+        nav ul a{
+            text-decoration: none;
+            color: white;
+            font-size: 20px;
+            font-weight: bold;
+        }
+       .logo-image{
+            border-radius: 150px;
+        }
+        .banner{
+            background-image: url('https://media.istockphoto.com/id/1494935138/photo/organic-cosmetics-with-ingredients.jpg?s=612x612&w=0&k=20&c=CU-pj99HM11FO2IDnQfBW_7lw7_0D-n_gBQaLmgc00Y=');
+            background-size: 100% 100%;
+            height: 70vh;
+            background-repeat: no-repeat; 
+            background-blend-mode: multiply;
+            background-color: rgba(0,0,0,0.5);
+        }
+        .banner_heading{
+            color: white;
+        }
+        .banner_descp{
+            color: #fff;
+        }
+        .banner_section{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            /* background-color: red; */
+            height: 100%;
+            line-height: 3rem;
+        }
+        .shop_luxury_btn{
+            background-color: hotpink ;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 20px;
+            color: white;
+            font-weight: bold;
+        }
+
+        .products{
+            /* background-color: #f2eded; */
+            margin-top: 40px;
+            text-align: center;
+            /* background-color: red; */
+            display: grid;
+            gap: 70px;
+            margin-left: 100px;
+            margin-right: 100px;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+
+        }
+        .product-card{
+            border: 1px solid #eee;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .product-card img{
+            height: 200px;
+            width: 200px;
+            margin-top: 30px;
+        
+        }
+
+        .product-card .add_luxury_btn{
+            margin-bottom: 10px;
+            background-color: hotpink;
+            border: none;
+            padding: 10px;
+            border-radius: 20px;
+            cursor: pointer;
+        }
+/* responsive media query */
+
+@media (max-width:600px){
+    header{
+        flex-direction: column;
+        gap: -20px;
+    }
+    nav ul{
+        flex-direction: column;
+        width: 100vw;
+        position: relative;
+        z-index: 2;
+        gap: 30px;
+    }
+    .banner{
+        margin-top: 400px;
+        z-index: -1;
+        position: relative;
+    }
+    .banner_descp{
+        text-align: center;
+    }
+
+
+}
+    
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="./logo.png" class="logo-image" alt="" height="60px" width="60px">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">All</a></li>
+                <li><a href="#">Fragrances</a></li>
+                <li><a href="#">Organic</a></li>
+                <li><a href="#">Bath & Body</a></li>
+                <li><a href="#">SkinCare</a></li>
+                <li><a href="#">Offers</a></li>
+                <li><a href="#">🛒</a></li>
+
+            </ul>
+        </nav>
+    </header>
+<!-- For banner -->
+    <div class="banner">
+        <section class="banner_section">
+            <h1 class="banner_heading">welcome to VelvetVow</h1>
+            <p class="banner_descp"><i>Where beauty meets elegance, with every product a promise of soft, luxurious perfection.</i></p>
+            <a href="#products"><button class="shop_luxury_btn">Shop Luxury</button></a>
+        </section>
+    </div>
+
+    <!-- for products display -->
+     <div class="products" id="products">
+        <div class="product-card">
+            <img src="https://www.bathandbodyworks.in/on/demandware.static/-/Sites-bathandbody_master_catalog/default/dwad43f5ff/large/028000253.jpg" alt="">
+            <h3>Hydrating Face Cream</h3>
+            <p>$25.99</p>
+            <button class="add_luxury_btn">Add luxury</button>
+        </div>
+
+        <div class="product-card">
+            <img src="https://www.oradorobeauty.in/cdn/shop/products/Buttercream1.jpg?v=1679296680" alt="">
+            <h3>Matte Liquid Lipstick</h3>
+            <p>$15.99</p>
+            <button class="add_luxury_btn">Add luxury</button>
+        </div>
+
+
+        <div class="product-card">
+            <img src="https://rukminim2.flixcart.com/image/850/1000/xif0q/moisturizer-cream/2/b/d/-original-imah5jnb8bcgjfhy.jpeg?q=90&crop=false" alt="">
+            <h3>Vitamin C Serum</h3>
+            <p>$35.99</p>
+            <button class="add_luxury_btn">Add luxury</button>
+        </div>
+
+
+        <div class="product-card">
+            <img src="https://nathabit.in/_nat/images/neem_bhringraj_Summer_hair_oil_1_f1fe7f880c.jpg?format=auto&width=1920&quality=75" alt="">
+            <h3>Nourishing Hair Oil</h3>
+            <p>$15.99</p>
+            <button class="add_luxury_btn">Add luxury</button>
+        </div>
+        <div class="product-card">
+            <img src="https://images-static.nykaa.com/media/catalog/product/d/2/d286138MANCO00000107_5.jpg?tr=w-500" alt="">
+            <h3>Charcoal Face Mask</h3>
+            <p>$15.99</p>
+            <button class="add_luxury_btn">Add luxury</button>
+        </div>
+
+
+        <div class="product-card">
+            <img src="https://lordscares.com/cdn/shop/files/4_93714912-bd73-4e61-8a09-16cf68801a55.jpg?v=1717488693" alt="">
+            <h3>BB Cream SPF 30</h3>
+            <p>$15.99</p>
+            <button class="add_luxury_btn">Add luxury</button>
+        </div>
+
+
+
+        <div class="product-card">
+            <img src="https://images-static.nykaa.com/media/catalog/product/d/2/d286138MANCO00000107_5.jpg?tr=w-500" alt="">
+            <h3>Charcoal Face Mask</h3>
+            <p>$15.99</p>
+            <button class="add_luxury_btn">Add luxury</button>
+        </div>
+
+
+        <div class="product-card">
+            <img src="https://lordscares.com/cdn/shop/files/4_93714912-bd73-4e61-8a09-16cf68801a55.jpg?v=1717488693" alt="">
+            <h3>BB Cream SPF 30</h3>
+            <p>$15.99</p>
+            <button class="add_luxury_btn">Add luxury</button>
+        </div>
+
+
+        <div class="product-card">
+            <img src="https://m.media-amazon.com/images/I/71GoVm0TEVL._AC_UF1000,1000_QL80_.jpg" alt="">
+            <h3>Rose Water Toner</h3>
+            <p>$15.99</p>
+            <button class="add_luxury_btn">Add luxury</button>
+        </div>
+
+     </div>
+</body>
+</html>

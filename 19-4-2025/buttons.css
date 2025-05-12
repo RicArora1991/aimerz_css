@@ -1,0 +1,61 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: rgb(226, 224, 224);
+}
+
+.home {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+button{
+    padding: 10px;
+    margin: 10px;
+    height: 70px;
+    width: 100px;
+    font-size: 20px;
+}
+#btn-1 {
+    color: white;
+    font-size: 20px;
+    margin: 10px;
+    border-radius: 30px;
+    padding: 5px;
+    background-color: red;
+    border: none;
+}
+
+#btn-1:hover {
+    background-color: rgb(252, 112, 112);
+}
+
+#btn-9 {
+    padding: 12px 24px;
+    font-size: 16px;
+    background: white;
+    border: 3px solid transparent;
+    border-radius: 8px;
+    background-image: 
+      linear-gradient(white, white),
+      linear-gradient(270deg, #ff6ec4, #7873f5, #ff6ec4); /* Repeated for smooth loop */
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
+    background-size: 200% 200%;
+    animation: gradientMove 3s linear infinite;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  @keyframes gradientMove {
+    0% {
+      background-position: 0% 50%;
+    }
+    100% {
+      background-position: 100% 50%;
+    }
+  }
+  
+

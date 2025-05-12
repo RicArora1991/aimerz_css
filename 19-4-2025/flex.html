@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        nav{
+            background-color: black;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+
+        }
+        a{
+            color: white;
+            text-decoration: none;
+        }
+        button{
+            background-color: transparent;
+            /* border: none; */
+            border: 1px solid white;
+            padding: 5px;
+            height: 30px;
+            border-radius: 10px;
+            transition:  background-color 1s, transform 2s;
+        }
+
+        button:hover, a:hover{
+            background-color: white;
+            color: black;
+            transform:scale(1.7) ;
+            
+        }
+    </style>
+ 
+</head>
+<body>
+ 
+    <nav>
+        <button><a href="#">Home</a></button>
+        <button><a href="#">About</a></button>
+        <button><a href="#">Contact</a></button>
+       <button> <a href="#">Login/Signup</a></button>
+
+    </nav>
+    <h1>Flex in CSS</h1>
+    <div class="gallery">
+
+    </div>
+</body>
+</html>

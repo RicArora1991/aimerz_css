@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="flex items-center justify-center h-screen bg-gray-100">
+   
+    <div class="dropDown_container text-left inline-block relative" >
+        <button id="dropdownButton" class="inline-flex justify-center w-full rounded-md border border-gray-300 shadow-sm px-4 py-2 bg-white text-sm font-medium text-gray-700 hover:bg-gray-200 focus:outline-none">Options
+
+            <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 9-7 7-7-7"/>
+              </svg>
+              
+        </button>
+
+
+        <div id="dropdownMenu" class="hidden origin-top-right absolute right-0 mt-2 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 z-10">
+            <div class="py-1" role="menu">
+                <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Account Settings</a>
+            </div>
+
+            <div class="py-1">
+                <a role="menuitem" href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Support</a>
+            </div>
+
+            <div class="py-1" role="menu">
+                <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">License</a>
+            </div>
+
+            <div class="py-1" role="menu">
+                <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Signout</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const dropdownBtn=document.getElementById('dropdownButton');
+        const dropdownMenu=document.getElementById('dropdownMenu');
+        dropdownBtn.addEventListener('click',()=>{
+            dropdownMenu.classList.toggle('hidden')
+        })
+    </script>
+</body>
+</html>
