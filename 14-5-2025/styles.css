@@ -1,0 +1,167 @@
+body,
+html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.solar_system {
+    position: relative;
+    width: 600px;
+    height: 600px;
+    top: -100px;
+    /* background-color: red; */
+
+}
+
+.sun {
+    width: 60px;
+    height: 60px;
+    background-color: #ffd700;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    box-shadow: 0 0 20px #ffd700;
+    z-index: 10;
+    transform: translate(-50%, -50%);
+}
+
+.planet {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+        border-radius: 50%;
+    transform-origin: center;
+    /* z-index: 11; */
+    transition: transform 0.3s;
+
+}
+.planet:hover{
+    transform: scale(1.5);
+}
+
+
+/* common orbit rings */
+.orbit {
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Mercuray */
+
+.mercury {
+    width: 10px;
+    height: 10px;
+    background-color: #8c7853;
+    animation: orbit 5s linear infinite;
+}
+
+.mercury_orbit {
+    height: 140px;
+    width: 140px;
+}
+
+/* Venus */
+.venus {
+    width: 15px;
+    height: 15px;
+    background-color: #ffa500;
+    animation: orbit 8s linear infinite;
+
+}
+
+.venus_orbit {
+    height: 200px;
+    width: 200px;
+}
+
+/* Earth */
+.earth {
+    width: 16px;
+    height: 16px;
+    background-color: #4169e1;
+    animation: orbit 10s linear infinite;
+
+}
+
+.earth_orbit {
+    height: 260px;
+    width: 260px;
+}
+
+
+/* Mars */
+.mars {
+    width: 14px;
+    height: 14px;
+    background-color: #ff4500;
+    animation: orbit 12s linear infinite;
+
+}
+
+.mars_orbit {
+    height: 320px;
+    width: 320px;
+}
+
+/* Jupiter */
+
+.jupiter {
+    width: 24px;
+    height: 24px;
+    background-color: #c69c6d;
+    animation: orbit 15s linear infinite;
+
+}
+
+.jupiter_orbit {
+    height: 400px;
+    width: 400px;
+}
+
+
+/* Saturn */
+.saturn {
+    width: 22px;
+    height: 22px;
+    background-color: #ddaf6d;
+    animation: orbit 18s linear infinite;
+    position: absolute;
+
+}
+
+.saturn_orbit {
+    height: 460px;
+    width: 460px;
+}
+
+.planet_info {
+ 
+    color: #fff;
+    position: absolute;
+    bottom: -50px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    width: 100%;
+}
+
+
+/* Animation for rotataion */
+@keyframes orbit{
+    from{
+        transform: rotate(0deg) translateX(70px) ;
+    }
+    to{
+         transform: rotate(360deg) translateX(70px);
+    }
+}
